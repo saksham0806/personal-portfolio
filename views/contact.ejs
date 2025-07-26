@@ -1,0 +1,76 @@
+<%- include('partials/header', { title: 'Contact' }) %>
+
+<section class="section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Contact Information</h2>
+            <p>Feel free to reach out through any of these channels</p>
+        </div>
+
+        <div class="contact-credentials">
+            <div class="credential-card">
+                <i class="fas fa-envelope"></i>
+                <div>
+                    <h3>Email</h3>
+                    <a href="mailto:<%= data.contact.email %>"><%= data.contact.email %></a>
+                </div>
+            </div>
+
+            <div class="credential-card">
+                <i class="fas fa-phone"></i>
+                <div>
+                    <h3>Phone</h3>
+                    <a href="tel:<%= data.contact.phone %>"><%= data.contact.phone %></a>
+                </div>
+            </div>
+
+            <div class="credential-card">
+                <i class="fab fa-github"></i>
+                <div>
+                    <h3>GitHub</h3>
+                    <a href="https://<%= data.contact.github %>" target="_blank"><%= data.contact.github %></a>
+                </div>
+            </div>
+
+            <div class="credential-card">
+                <i class="fab fa-linkedin"></i>
+                <div>
+                    <h3>LinkedIn</h3>
+                    <a href="https://<%= data.contact.linkedin %>" target="_blank"><%= data.contact.linkedin %></a>
+                </div>
+            </div>
+
+            <div class="credential-card">
+                <i class="fas fa-code"></i>
+                <div>
+                    <h3>LeetCode</h3>
+                    <a href="<%= data.contact.leetcode %>" target="_blank">View Profile</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" style="background-color: #f5f7fa;">
+    <div class="container">
+        <div class="section-title">
+            <h2>References</h2>
+        </div>
+
+        <div class="references-grid">
+            <div class="reference-card">
+                <h3>Mr. Nathi Singh</h3>
+                <p>Additional Vice President – Reliance BSES</p>
+                <a href="mailto:Nathi.Singh@reliancegroupindia.com">Nathi.Singh@reliancegroupindia.com</a>
+            </div>
+
+            <div class="reference-card">
+                <h3>Dr. Madhvesh Pathak</h3>
+                <p>Senior Professor – VIT, Vellore</p>
+                <a href="mailto:Madhvesh.pathak@vit.ac.in">Madhvesh.pathak@vit.ac.in</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,97 @@
+<%- include('partials/header', { title: 'Skills' }) %>
+
+<section class="section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Technical Skills</h2>
+        </div>
+        
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>Languages</h3>
+                <ul class="skill-list">
+                    <% data.skills.languages.forEach(skill => { %>
+                        <li><%= skill %></li>
+                    <% }); %>
+                </ul>
+            </div>
+            
+            <div class="skill-category">
+                <h3>Frameworks</h3>
+                <ul class="skill-list">
+                    <% data.skills.frameworks.forEach(skill => { %>
+                        <li><%= skill %></li>
+                    <% }); %>
+                </ul>
+            </div>
+            
+            <div class="skill-category">
+                <h3>Web Technologies</h3>
+                <ul class="skill-list">
+                    <% data.skills.webTech.forEach(skill => { %>
+                        <li><%= skill %></li>
+                    <% }); %>
+                </ul>
+            </div>
+            
+            <div class="skill-category">
+                <h3>Databases</h3>
+                <ul class="skill-list">
+                    <% data.skills.databases.forEach(skill => { %>
+                        <li><%= skill %></li>
+                    <% }); %>
+                </ul>
+            </div>
+            
+            <div class="skill-category">
+                <h3>Tools</h3>
+                <ul class="skill-list">
+                    <% data.skills.tools.forEach(skill => { %>
+                        <li><%= skill %></li>
+                    <% }); %>
+                </ul>
+            </div>
+            
+            <div class="skill-category">
+                <h3>Other Skills</h3>
+                <ul class="skill-list">
+                    <% data.skills.other.forEach(skill => { %>
+                        <li><%= skill %></li>
+                    <% }); %>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" style="background-color: #f5f7fa;">
+    <div class="container">
+        <div class="section-title">
+            <h2>Soft Skills</h2>
+        </div>
+        
+        <div class="soft-skills">
+            <% data.softSkills.forEach(skill => { %>
+                <span class="skill-tag"><%= skill %></span>
+            <% }); %>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Languages</h2>
+        </div>
+        
+        <div class="languages-list">
+            <% data.languages.forEach(lang => { %>
+                <div class="language-item">
+                    <p><%= lang %></p>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+</section>
+
+<%- include('partials/footer') %>

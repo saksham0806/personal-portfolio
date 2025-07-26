@@ -1,0 +1,48 @@
+<%- include('partials/header', { title: 'About' }) %>
+
+<section class="section">
+    <div class="container">
+        <div class="section-title">
+            <h2>About Me</h2>
+        </div>
+        
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Professional Summary</h3>
+                <p>Detail-oriented and results-driven Computer Science undergraduate with a specialization in Data Science. Skilled in full-stack development and cloud deployment. Proficient in Python, JavaScript, SQL, and modern frameworks such as React and Django. Passionate about solving real-world problems using data-driven approaches and developing scalable software applications. Familiar with Agile development, Git version control, and software engineering principles.</p>
+                
+                <h3 style="margin-top: 40px;">Education</h3>
+                <% data.education.forEach(edu => { %>
+                    <div class="education-item" style="margin-bottom: 30px;">
+                        <h4><%= edu.degree %></h4>
+                        <p class="institution"><%= edu.institution %></p>
+                        <% if (edu.gpa) { %>
+                            <p><strong>GPA:</strong> <%= edu.gpa %></p>
+                        <% } %>
+                        <% if (edu.percentage) { %>
+                            <p><strong>Percentage:</strong> <%= edu.percentage %></p>
+                        <% } %>
+                        <% if (edu.coursework) { %>
+                            <p><strong>Relevant Coursework:</strong> <%= edu.coursework %></p>
+                        <% } %>
+                    </div>
+                <% }); %>
+            </div>
+            
+            <div class="about-image">
+                <div class="image-placeholder"></div>
+                
+                <div class="achievements" style="margin-top: 40px;">
+                    <h3>Achievements</h3>
+                    <ul class="achievement-list">
+                        <% data.achievements.forEach(achievement => { %>
+                            <li><%= achievement %></li>
+                        <% }); %>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<%- include('partials/footer') %>

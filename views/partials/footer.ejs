@@ -1,0 +1,25 @@
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Me</h3>
+                <p><i class="fas fa-phone"></i> <%= data.contact.phone %></p>
+                <p><i class="fas fa-envelope"></i> <%= data.contact.email %></p>
+            </div>
+            <div class="social-links">
+                <h3>Connect</h3>
+                <div class="contact-logos">
+                    <a href="https://github.com/saksham0806" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/saksham-singh0806/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="<%= data.contact.leetcode %>" target="_blank"><i class="fas fa-code"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; <%= new Date().getFullYear() %> <%= data.name %>. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+<script src="/js/main.js"></script>
+</body>
+</html>
