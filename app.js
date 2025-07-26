@@ -18,7 +18,7 @@ const resumeData = {
     email: "sakshamsingh0806@gmail.com",
     github: "github.com/saksham0806",
     linkedin: "linkedin.com/in/saksham-singh0806/",
-    leetcode: "https://leetcode.com/u/sakshamsingh0806/"
+    leetcode: "leetcode.com/u/sakshamsingh0806/"
   },
   education: [
     {
