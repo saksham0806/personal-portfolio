@@ -1,6 +1,6 @@
 <%- include('partials/header', { title: 'About' }) %>
 
-<section class="section">
+<section class="section pagedet">
     <div class="container">
         <div class="section-title">
             <h2>About Me</h2>
@@ -46,13 +46,13 @@
             </div>
             
             <div class="about-image">
-                <img src="/face.jpg" alt="<%= data.name %>" class="profile-photo">
+                <img src="/face.jpg" alt="<%= data.name %>" class="profile-photo hidden-photo">
                 
                 <div class="achievements" style="margin-top: 40px;">
                     <h3>Achievements</h3>
                     <ul class="achievement-list">
                         <% data.achievements.forEach(achievement => { %>
-                            <li><%= achievement %></li>
+                            <li><%= achievement.name %> <a href="<%=achievement.link%>">(Certificate)</a></li>
                         <% }); %>
                     </ul>
                 </div>

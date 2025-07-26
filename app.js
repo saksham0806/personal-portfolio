@@ -41,21 +41,31 @@ const resumeData = {
     tools: ["Git", "GitHub", "VS Code", "Linux", "IBM Cloud", "Docker", "Kubernetes"],
     other: ["Data Structures", "Algorithms", "Object-Oriented Programming", "Full-Stack Development", "Software Engineering", "Agile Scrum"]
   },
-  achievements: [
-    "BU x Berkeley SkyDeck Fund Hackathon 2025 — Bangkok University, Thailand (Certificate)",
-    "Central Hack' 25 2025 — VIT University, Vellore (Certificate)",
-    "Technica 2024 — VIT University, Vellore (Certificate)"
+  achievements: [{
+    name:"BU x Berkeley SkyDeck Fund Hackathon 2025 — Bangkok University, Thailand",
+    link:"https://drive.google.com/file/d/1WtNeBibewjs3FukKWdOBCKBWu9qvAphl/view?usp=sharing"
+  },
+  {
+    name: "Central Hack' 25 2025 — VIT University, Vellore",
+    link: "https://drive.google.com/file/d/1gJlmruItML8ROLgiKEKyx9mqtfA_CYYN/view?usp=sharing"
+  },
+  {
+    name: "Technica 2024 — VIT University, Vellore",
+    link: "https://drive.google.com/file/d/13IigebmVdTomDPefuzwG3NhUlVKKhAU4/view?usp=sharing"
+  }
   ],
   projects: [
     {
       name: "Trading Simulator Web App",
       description: "Developed a secure full-stack trading simulator using React, Node.js, Express, and PostgreSQL. Implemented session-based log-in, RESTful API integration, and real-time updates using sockets. Set up and maintained the user database on Supabase for optimized performance and security.",
-      link: "https://github.com/saksham0806/Trading-Simulator"
+      link: "https://github.com/saksham0806/Trading-Simulator",
+      image: "Trading_Simulator.png"
     },
     {
       name: "Personal Portfolio Website",
       description: "Created a mobile-responsive personal portfolio using HTML5, CSS3, JavaScript, and GitHub Pages. Embedded Google Analytics and added accessibility support.",
-      link: "#"
+      link: "#",
+      image: "personal.png"
     }
   ],
   certifications: [
@@ -69,6 +79,11 @@ const resumeData = {
       issuer: "Coursera June 2025",
       description: "Includes training on HTML, CSS, JavaScript, React, Node.js, Python, Flask, Cloud Computing, DevOps",
       link: "https://coursera.org/share/e3c492bf2b784d13df60f5cc7a527d8b"
+    },
+    {
+      name: "Problem Solvers: Mastering Data Structures \& Algorithm Certificate",
+      issuer: "FacePrep",
+      link: "https://drive.google.com/file/d/1CEnbGHRYqa8pnMnu5DjOGSzY_blmPgrx/view?usp=sharing"
     }
   ],
   languages: [
