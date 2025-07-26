@@ -196,64 +196,79 @@ nav {
     height: 3px;
     background-color: var(--primary-color);
 }
-
-/* About Section */
-.about-content {
-    display: flex;
-    gap: 50px;
-}
-
-.about-text {
-    flex: 1;
-}
-
-.about-text h3 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.about-text p {
-    margin-bottom: 20px;
-}
-
-.about-image {
-    flex: 1;
-}
-
-/* Skills Section */
-.skills-container {
+/* About Page - Education Cards */
+.education-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 30px;
+    margin-top: 30px;
 }
 
-.skill-category {
+.education-card {
     background-color: white;
-    padding: 30px;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 25px;
+    transition: transform 0.3s ease;
 }
 
-.skill-category h3 {
+.education-card:hover {
+    transform: translateY(-5px);
+}
+
+.edu-header {
     margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.edu-header h4 {
     color: var(--secondary-color);
+    margin-bottom: 5px;
 }
 
-.skill-list {
-    list-style: none;
-}
-
-.skill-list li {
-    margin-bottom: 10px;
-    position: relative;
-    padding-left: 25px;
-}
-
-.skill-list li::before {
-    content: '▹';
-    position: absolute;
-    left: 0;
+.institution {
     color: var(--primary-color);
+    font-weight: 500;
+}
+
+.edu-details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.detail-item i {
+    color: var(--primary-color);
+    margin-top: 3px;
+}
+
+.detail-item p {
+    margin-top: 5px;
+    margin-left: 25px;
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .education-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-content {
+        flex-direction: column;
+    }
+    
+    .about-image {
+        margin-top: 40px;
+    }
 }
 
 /* Projects Section */

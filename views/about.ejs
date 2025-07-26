@@ -12,21 +12,37 @@
                 <p>Detail-oriented and results-driven Computer Science undergraduate with a specialization in Data Science. Skilled in full-stack development and cloud deployment. Proficient in Python, JavaScript, SQL, and modern frameworks such as React and Django. Passionate about solving real-world problems using data-driven approaches and developing scalable software applications. Familiar with Agile development, Git version control, and software engineering principles.</p>
                 
                 <h3 style="margin-top: 40px;">Education</h3>
-                <% data.education.forEach(edu => { %>
-                    <div class="education-item" style="margin-bottom: 30px;">
-                        <h4><%= edu.degree %></h4>
-                        <p class="institution"><%= edu.institution %></p>
-                        <% if (edu.gpa) { %>
-                            <p><strong>GPA:</strong> <%= edu.gpa %></p>
-                        <% } %>
-                        <% if (edu.percentage) { %>
-                            <p><strong>Percentage:</strong> <%= edu.percentage %></p>
-                        <% } %>
-                        <% if (edu.coursework) { %>
-                            <p><strong>Relevant Coursework:</strong> <%= edu.coursework %></p>
-                        <% } %>
-                    </div>
-                <% }); %>
+                <div class="education-grid">
+                    <% data.education.forEach(edu => { %>
+                        <div class="education-card">
+                            <div class="edu-header">
+                                <h4><%= edu.degree %></h4>
+                                <p class="institution"><%= edu.institution %></p>
+                            </div>
+                            <div class="edu-details">
+                                <% if (edu.gpa) { %>
+                                    <div class="detail-item">
+                                        <i class="fas fa-star"></i>
+                                        <span>GPA: <%= edu.gpa %></span>
+                                    </div>
+                                <% } %>
+                                <% if (edu.percentage) { %>
+                                    <div class="detail-item">
+                                        <i class="fas fa-percentage"></i>
+                                        <span>Percentage: <%= edu.percentage %></span>
+                                    </div>
+                                <% } %>
+                                <% if (edu.coursework) { %>
+                                    <div class="detail-item">
+                                        <i class="fas fa-book"></i>
+                                        <span>Relevant Coursework</span>
+                                        <p><%= edu.coursework %></p>
+                                    </div>
+                                <% } %>
+                            </div>
+                        </div>
+                    <% }); %>
+                </div>
             </div>
             
             <div class="about-image">
