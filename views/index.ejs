@@ -1,22 +1,30 @@
 <%- include('partials/header', { title: 'Home' }) %>
 
-<section class="hero">
-    <div class="container">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>Hi, I'm <span><%= data.name %></span></h1>
-                <h2><%= data.title %></h2>
-                <p>Detail-oriented and results-driven Computer Science undergraduate with a specialization in Data Science. Skilled in full-stack development and cloud deployment.</p>
-                <div class="cta-buttons">
-                    <a href="/projects" class="btn">View My Work</a>
-                    <a href="/contact" class="btn btn-outline">Contact Me</a>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Hi, I'm <span>
+                            <%= data.name %>
+                        </span></h1>
+                    <h2>
+                        <%= data.title %>
+                    </h2>
+                    <p>Detail-oriented and results-driven Computer Science undergraduate with a specialization in Data
+                        Science. Skilled in full-stack development and cloud deployment.</p>
+                    <div class="cta-buttons">
+                        <!-- In your index.ejs file, replace the existing button -->
+                        <a href="/projects" class="btn btn-view-work">
+                            View My Work 
+                        </a>
+                        <a href="/contact" class="btn btn-outline">Contact Me</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="/face.jpg" alt="<%= data.name %>" class="profile-photo">
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="/face.jpg" alt="<%= data.name %>" class="profile-photo">
-            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<%- include('partials/footer') %>
+    <%- include('partials/footer') %>
