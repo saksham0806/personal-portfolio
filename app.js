@@ -64,7 +64,7 @@ const resumeData = {
     {
       name: "Personal Portfolio Website",
       description: "Created a mobile-responsive personal portfolio using HTML5, CSS3, JavaScript, and GitHub Pages. Embedded Google Analytics and added accessibility support.",
-      link: "#",
+      link: "https://saksham-portfolio-beta.vercel.app/",
       image: "personal.png"
     }
   ],
