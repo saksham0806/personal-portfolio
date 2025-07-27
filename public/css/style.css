@@ -12,7 +12,8 @@
   --header-bg: white;
   --section-bg: #f5f7fa;
   --shadow-color: rgba(0, 0, 0, 0.1);
-
+  --gradient-bg: #c3cfe2;
+  
   /* Dark mode */
   --primary-color-dark: #2980b9;
   --secondary-color-dark: white;
@@ -25,6 +26,7 @@
   --header-bg-dark: #1a1a1a;
   --section-bg-dark: #2d2d2d;
   --shadow-color-dark: rgba(0, 0, 0, 0.4);
+  --gradient-bg-dark: #2d3748;
 }
 
 * {
@@ -42,6 +44,11 @@ body {
     overflow-x: hidden;
 }
 
+.spacer{
+    height: 5vh;
+    width: 100vw;
+}
+
 /* Dark mode activation */
 body.dark-mode {
   --primary-color: var(--primary-color-dark);
@@ -55,6 +62,7 @@ body.dark-mode {
   --header-bg: var(--header-bg-dark);
   --section-bg: var(--section-bg-dark);
   --shadow-color: var(--shadow-color-dark);
+  --gradient-bg: var(--gradient-bg-dark);
 }
 a {
     text-decoration: none;
@@ -84,7 +92,7 @@ section {
 
 /* Special sections with alternate backgrounds */
 .section-alt-bg {
-  background-color: var(--section-bg);
+  background: linear-gradient(135deg, var(--section-bg) 0%, var(--gradient-bg) 100%);
 }
 
 .dark-mode .section-alt-bg {
