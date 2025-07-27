@@ -1,20 +1,37 @@
 /* ===== Global Styles ===== */
 :root {
-    --primary-color: #3498db;
-    --secondary-color: #2c3e50;
-    --accent-color: #e74c3c;
-    --light-color: #ecf0f1;
-    --dark-color: #2c3e50;
-    --text-color: #333;
-    --text-light: #7f8c8d;
-    --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    --transition: all 0.3s ease;
+  /* Light mode */
+  --primary-color: #3498db;
+  --secondary-color: #2c3e50;
+  --nav-color: white;
+  --accent-color: #e74c3c;
+  --text-color: #333;
+  --text-light: #7f8c8d;
+  --bg-color: #f9f9f9;
+  --card-bg: white;
+  --header-bg: white;
+  --section-bg: #f5f7fa;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+
+  /* Dark mode */
+  --primary-color-dark: #2980b9;
+  --secondary-color-dark: white;
+  --nav-color-dark: #34495e;
+  --accent-color-dark: #c0392b;
+  --text-color-dark: #ecf0f1;
+  --text-light-dark: #bdc3c7;
+  --bg-color-dark: #121212;
+  --card-bg-dark: #1e1e1e;
+  --header-bg-dark: #1a1a1a;
+  --section-bg-dark: #2d2d2d;
+  --shadow-color-dark: rgba(0, 0, 0, 0.4);
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 body {
@@ -25,6 +42,20 @@ body {
     overflow-x: hidden;
 }
 
+/* Dark mode activation */
+body.dark-mode {
+  --primary-color: var(--primary-color-dark);
+  --secondary-color: var(--secondary-color-dark);
+  --nav-color: var(--nav-color-dark);
+  --accent-color: var(--accent-color-dark);
+  --text-color: var(--text-color-dark);
+  --text-light: var(--text-light-dark);
+  --bg-color: var(--bg-color-dark);
+  --card-bg: var(--card-bg-dark);
+  --header-bg: var(--header-bg-dark);
+  --section-bg: var(--section-bg-dark);
+  --shadow-color: var(--shadow-color-dark);
+}
 a {
     text-decoration: none;
     color: var(--primary-color);
@@ -44,6 +75,52 @@ a:hover {
 
 section {
     padding: 80px 0;
+    background-color: var(--bg-color);
+}
+
+.dark-mode section {
+  background-color: var(--bg-color-dark);
+}
+
+/* Special sections with alternate backgrounds */
+.section-alt-bg {
+  background-color: var(--section-bg);
+}
+
+.dark-mode .section-alt-bg {
+  background-color: var(--section-bg-dark);
+}
+
+/* Dark mode specific adjustments */
+.dark-mode header {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .nav-links a {
+    color: var(--text-color);
+}
+
+.dark-mode .nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.dark-mode footer {
+    background-color: var(--header-bg-dark);
+    border-top: 1px solid #444;
+}
+
+.dark-mode .section-title h2::after {
+    background-color: var(--primary-color);
+}
+
+.dark-mode .btn-outline {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.dark-mode .btn-outline:hover {
+    background-color: var(--primary-color);
+    color: white;
 }
 
 .section-title {
@@ -102,7 +179,7 @@ section {
 
 /* ===== Header & Navigation ===== */
 header {
-    background-color: white;
+    background-color: var(--nav-color);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     position: fixed;
     width: 100%;
@@ -156,10 +233,13 @@ nav {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     padding-top: 80px;
+    background: linear-gradient(135deg, var(--section-bg) 0%, #c3cfe2 100%);
 }
 
+.dark-mode .hero {
+  background: linear-gradient(135deg, var(--section-bg-dark) 0%, #2d3748 100%);
+}
 .hero-content {
     display: flex;
     align-items: center;
@@ -249,7 +329,7 @@ nav {
 }
 
 .education-card {
-    background-color: white;
+    background-color: var(--card-bg);
     border-radius: 8px;
     box-shadow: var(--shadow);
     padding: 25px;
@@ -330,8 +410,8 @@ nav {
 }
 
 .project-card {
-    background-color: white;
     border-radius: 8px;
+    background-color: var(--card-bg);
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: var(--transition);
@@ -378,10 +458,10 @@ nav {
 }
 
 .skill-category {
-    background-color: white;
     padding: 30px;
     border-radius: 8px;
     box-shadow: var(--shadow);
+    background-color: var(--card-bg);
 }
 
 .skill-category h3 {
@@ -423,6 +503,10 @@ nav {
     transition: var(--transition);
 }
 
+.dark-mode .skill-tag {
+  background-color: var(--primary-color-dark);
+}
+
 .skill-tag:hover {
     transform: scale(1.05);
 }
@@ -436,8 +520,8 @@ nav {
 }
 
 .language-item {
-    background-color: white;
     padding: 20px;
+    background-color: var(--card-bg);
     border-radius: 8px;
     box-shadow: var(--shadow);
     text-align: center;
@@ -458,8 +542,8 @@ nav {
 }
 
 .credential-card {
-    background-color: white;
     padding: 30px;
+    background-color: var(--card-bg);
     border-radius: 8px;
     box-shadow: var(--shadow);
     display: flex;
@@ -493,8 +577,8 @@ nav {
 }
 
 .reference-card {
-    background-color: white;
     padding: 30px;
+    background-color: var(--card-bg);
     border-radius: 8px;
     box-shadow: var(--shadow);
     transition: var(--transition);
@@ -573,12 +657,16 @@ footer {
 }
 
 .certification-card {
-    background-color: white;
     border-radius: 8px;
     padding: 30px;
     box-shadow: var(--shadow);
     transition: var(--transition);
+    background-color: var(--card-bg);
     border-left: 4px solid var(--primary-color);
+}
+
+.dark-mode .certification-card {
+  border-left-color: var(--primary-color-dark);
 }
 
 .certification-card:hover {
@@ -718,6 +806,34 @@ footer {
 
 .nav-items a:hover {
     color: var(--primary-color);
+}
+
+/* Dark mode toggle button */
+.theme-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  transition: all 0.3s ease-in-out;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+.theme-toggle i {
+  font-size: 1.5rem;
 }
 
 /* Mobile Styles */
